@@ -1,0 +1,23 @@
+.primarydiv{
+    background-color: rgb(255, 194, 96);
+    height: 150px;
+}
+
+.maintext{
+    font-family: Lemon/Milk;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 150px;
+    font-size: 60px;
+}
+
+.typing{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.typing h2{
+    text-align: center;
+}
