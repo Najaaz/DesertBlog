@@ -18,6 +18,7 @@ class Comments(models.Model):
     post_connection = models.ForeignKey(Post, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     content = models.CharField(max_length=300)
+    date_created = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return f"({self.post_connection}) =>{self.name}"

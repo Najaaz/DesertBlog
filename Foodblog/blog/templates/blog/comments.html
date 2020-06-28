@@ -1,9 +1,38 @@
 {% extends "blog/base.html" %}
 
-{% block title %}Comment{% endblock %}
+{% block title %}Comments{% endblock %}
 
 {% block body %}
 
+<div class="card mb-3">
+    <div class="card-header">{{post.date_created}}</div>
+    <div class="card-body">
+        <h4 class="card-title">{{post.title}}</h4>
+        <p class="card-text">{{post.content}}.</p>
+        {% if post.image %}
+            <img class="img-fluid img-responsive mx-auto" src="{{post.image.url}}">
+        {% endif %}
+        <div class="card-body-button mt-4">
+            <a class="btn btn-outline-pink" href="#">Add a comment</a>
+        </div>
+    </div>
+</div>
 
+{% if comments %}
+    {% for comment in comments %}
+    <div class="card mb-3 mt-1">
+        <div class="card-body">
+            <h6 class="text-muted">{{comment.date_created|date:'d M, P'}}</h6>
+            <h4 class="card-title">{{comment.name}}</h4>
+            <p class="card-text">{{comment.content}}.</p>
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <div>
+        <h2 class="text-muted text-center">Hmmm...seems like there are no comments.<br>Why don't you add one?</h2>
+        <a class="btn btn-outline-danger d-block mx-auto" style="width: 150px;" href="#">Add a comment</a>
+    </div>
+{% endif %}
 
 {% endblock %}
