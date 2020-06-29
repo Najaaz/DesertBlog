@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(253, 239, 155);
+    margin-bottom: 50px;
+}
+
+.primarydiv{
+    background-color: rgb(255, 194, 96);
+    height: 150px;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.maintext{
+    font-family: Lemon/Milk;
+    font-weight: bold;
+    color: white;
+    line-height: 150px;
+    font-size: 60px;
+}
+
+.typing{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.typing h2{
+    text-align: center;
+}
+
+.card-header{
+    background-color: goldenrod;
+}
+
+.card-body{
+    background-color: rgb(250, 255, 205);
+    display: flex;
+    flex-direction: column; 
+}
+
+.btn-outline-pink{
+    color: #F93800;
+    border: 1px solid #F93800;
+}
+.btn-outline-pink:hover{
+    background-color: #F93800;
+    color: white;
+
+}
+
+@media(min-width:1000px){
+    .img-fluid{
+        max-width: 800px;
+    }
+}
